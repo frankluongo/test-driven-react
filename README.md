@@ -57,6 +57,10 @@ module.exports = {
 
 - ESLint by default will try to use ES5, and doesn't understand modules so make sure to add those
 
+#### Extending An ESLint Config
+
+- You can add plugins like `eslint-plugin-jest` to help ESLint understand different file types
+
 ### Beautifying Code With Prettier
 
 ### Real-Time Testing With Wallaby
