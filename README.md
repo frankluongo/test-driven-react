@@ -24,3 +24,17 @@ Test Suites (`describe()`) are typically nouns, the test name (`it()`) is a verb
 - `Branches` refer to possible outcomes of `if/else` statements
 
 ### The Mantra: Red, Green, Repeat
+
+Write tests first yo
+
+## Chapter 2: Integrated Tooling With VSCode
+
+### Editing With VS Code
+
+### Checking Code Quality With ESLint
+
+### Beautifying Code With Prettier
+
+### Real-Time Testing With Wallaby
+
+### Mantra: Live In The Code
