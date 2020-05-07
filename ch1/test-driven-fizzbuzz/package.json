@@ -6,6 +6,7 @@
   "private": true,
   "scripts": {
     "test": "jest",
+    "test:coverage": "jest --coverage --coverageReporters=text",
     "test:watch": "jest --watchAll"
   },
   "author": "",
