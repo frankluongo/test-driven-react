@@ -70,8 +70,15 @@ module.exports = {
 
 - Make sure `Prettier` and `ESLint` work together by using `npm​​ ​​install​​ ​​--save-dev​​ ​​prettier-eslint-cli`
 
-#### Configuring Prettier
+#### Integrating Prettier With VSCode
+
+- Install the “Prettier” extension by Esben Petersen
+- To recognize the connection to ESLint, add `"prettier.eslintIntegration"​: ​true​` to your settings
 
 ### Real-Time Testing With Wallaby
 
+- Skipped because I'm not about to pay \$120/year for this
+
 ### Mantra: Live In The Code
+
+Avoid context switching as much as possible.
