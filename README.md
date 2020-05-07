@@ -2,11 +2,13 @@
 
 ## Chapter 1: TDD With Jest
 
-### Running Package Binaries With NPX
+### Introducing Jest
+
+#### Running Package Binaries With NPX
 
 - `NPX` allows you to run packages without having to install them globally
 
-### Writing a Test
+#### Writing a Test
 
 - `describe()` declares a test suite, which is a grouping of tests. Its first argument is a name, and the second is a function containing one or more tests.
 - `it()` declares a test. Its first argument is a name, and the second is a function with the actual test code.
@@ -14,3 +16,11 @@
 - `toBe()` is a matcher that performs a strict equality test between the value being tested (the expect() argument) and the expected value (its own argument).
 
 Test Suites (`describe()`) are typically nouns, the test name (`it()`) is a verb. Combined they make a sentence, making it easier to understand.
+
+### The Tao of Test-Driven Development
+
+#### Measuring Test Coverage
+
+- `Branches` refer to possible outcomes of `if/else` statements
+
+### The Mantra: Red, Green, Repeat
