@@ -61,7 +61,16 @@ module.exports = {
 
 - You can add plugins like `eslint-plugin-jest` to help ESLint understand different file types
 
+#### Integrating ESLint with VSCode
+
+- Add the `ESLint` Extension by Dirk Baeumer.
+- You can avoid seeing ESLint errors until you save by using `​"eslint.run"​: ​"onSave"` in your editor settings
+
 ### Beautifying Code With Prettier
+
+- Make sure `Prettier` and `ESLint` work together by using `npm​​ ​​install​​ ​​--save-dev​​ ​​prettier-eslint-cli`
+
+#### Configuring Prettier
 
 ### Real-Time Testing With Wallaby
 
