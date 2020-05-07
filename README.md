@@ -82,3 +82,17 @@ module.exports = {
 ### Mantra: Live In The Code
 
 Avoid context switching as much as possible.
+
+## Chapter 3: Testing React With Enzyme
+
+### Starting a React Project
+
+### Testing Simple Components With Enzyme
+
+### Adding a Jest Setup File
+
+### Testing Nested Markup
+
+### Testing Stateful Components
+
+### Mantra: Test One Piece At A Time
