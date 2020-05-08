@@ -87,9 +87,14 @@ Avoid context switching as much as possible.
 
 ### Starting a React Project
 
+- This stuff is pretty straightforward
+
 ### Testing Simple Components With Enzyme
 
 ### Adding a Jest Setup File
+
+- By default, Jest looks for a `jest.config.js` file at the root of a project
+- You can then use `setupFilesAfterEnv: ["./point/to/file.js"]` to set up a setup file
 
 ### Testing Nested Markup
 
