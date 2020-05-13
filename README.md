@@ -101,3 +101,17 @@ Avoid context switching as much as possible.
 ### Testing Stateful Components
 
 ### Mantra: Test One Piece At A Time
+
+In this book we test every component one piece at a time instead of the `react-testing-library` way of doing it. I don't mind this but I'm not sold.
+
+## Chapter 4: Styling in JavaScript with Styled Components
+
+Yeah yeah CSS is bad and styled components makes it better, WE KNOW!
+
+### Packaging an App With Webpack
+
+### Getting Started With Styled Components
+
+### Testing Styled Components
+
+### Mantra: Actively Seek Feedback
