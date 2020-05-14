@@ -7,6 +7,10 @@ class Carousel extends React.PureComponent {
     slideIndex: 0,
   };
 
+  static defaultProps = {
+    defaultImgHeight: CarouselSlide.defaultProps.imgHeight,
+  };
+
   handleClick(value) {
     const { slides } = this.props;
     this.setState(({ slideIndex }) => ({
@@ -15,10 +19,13 @@ class Carousel extends React.PureComponent {
   }
 
   render() {
-    const { slides, ...rest } = this.props;
+    const { defaultImgHeight, slides, ...rest } = this.props;
     return (
       <div {...rest}>
-        <CarouselSlide {...slides[this.state.slideIndex]} />
+        <CarouselSlide
+          {...slides[this.state.slideIndex]}
+          imgHeight={defaultImgHeight}
+        />
         <CarouselButton
           data-action="prev"
           onClick={this.handleClick.bind(this, -1)}
