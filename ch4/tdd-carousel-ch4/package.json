@@ -37,6 +37,7 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
-    "react": "^16.13.1"
+    "react": "^16.13.1",
+    "styled-components": "^5.1.0"
   }
 }
