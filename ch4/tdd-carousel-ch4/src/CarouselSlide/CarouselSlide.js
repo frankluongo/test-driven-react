@@ -1,8 +1,9 @@
 import React from "react";
 
-import { Img } from "./CarouselSlideStyles";
+import { Img as DefaultImg } from "./CarouselSlideStyles";
 
 const CarouselSlide = ({
+  Img,
   attribution,
   description,
   imgHeight,
@@ -21,6 +22,7 @@ const CarouselSlide = ({
 };
 
 CarouselSlide.defaultProps = {
+  Img: DefaultImg,
   imgHeight: 500,
 };
 
