@@ -115,3 +115,35 @@ Yeah yeah CSS is bad and styled components makes it better, WE KNOW!
 ### Testing Styled Components
 
 ### Mantra: Actively Seek Feedback
+
+before you start writing a piece of code, ask yourself what the most valuable feedback you could receive for that code would be. Then take steps to make it a reality. In other words: “actively seek feedback.”
+
+## Chapter 5: Refactoring with Higher-Order Components
+
+Each Component should only have one job. If you have a component with more than one responsibility, it may be time to split it into multiple things or use some higher order components.
+
+### Making Higher-Order Components
+
+Simple Example:
+
+```jsx
+  const BindProps = (Component, boundProps) => {
+    const ComponentWithBoundProps = props => (
+      <Component {...props} {...boundProps}>
+    );
+    ComponentWithBoundProps.displayName = `BindProps(${Component.displayName || Component.name})`;
+    return ComponentWithBoundProps
+  };
+
+  const CarouselWithTestAttr = BindProps(Carousel, { 'data-test-id': 'carousel'})
+```
+
+Here we've created a Carousel that gets passed a `data-test-id` attribute.
+
+### The Controllable Pattern
+
+### Stacking Higher-Order Components
+
+### Inspecing Components With React DevTools
+
+### Mantra: Keep The Unit Small
