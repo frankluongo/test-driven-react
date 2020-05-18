@@ -142,6 +142,13 @@ Here we've created a Carousel that gets passed a `data-test-id` attribute.
 
 ### The Controllable Pattern
 
+In `ReactLand` components are commonly described as _controlled_ or _uncontrolled_, and that status usually refers to a variable used in the component.
+
+- A _controlled_ component has a variable that is passed to it from `props`.
+- An _uncontrolled_ component has a variable that is managed by `state`.
+
+The _controllable pattern_ is a means of implemented components that have the benefits of both the _controlled_ and _uncontrolled_ options. Essentially, you pass in an optional `prop` to your component and define a `state` variable. If that `prop` is defined, then your component will be controlled by it, otherwise it will fallback to using the `state`.
+
 ### Stacking Higher-Order Components
 
 ### Inspecing Components With React DevTools
