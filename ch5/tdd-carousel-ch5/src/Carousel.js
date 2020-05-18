@@ -2,47 +2,45 @@ import React from "react";
 import CarouselButton from "./CarouselButton";
 import CarouselSlide from "./CarouselSlide";
 
-class Carousel extends React.PureComponent {
-  state = {
-    slideIndex: 0,
-  };
+import HasIndex from "./HasIndex";
 
-  static defaultProps = {
-    defaultImg: CarouselSlide.defaultProps.Img,
-    defaultImgHeight: CarouselSlide.defaultProps.imgHeight,
-  };
+export const Carousel = (props) => {
+  const {
+    defaultImg,
+    defaultImgHeight,
+    slides,
+    slideIndex,
+    slideIndexDecrement: _slideIndexDecrement,
+    slideIndexIncrement: _slideIndexIncrement,
+    ...rest
+  } = props;
 
-  handleClick(value) {
-    const { slides } = this.props;
-    this.setState(({ slideIndex }) => ({
-      slideIndex: (slideIndex + slides.length + value) % slides.length,
-    }));
-  }
+  return (
+    <div {...rest}>
+      <CarouselSlide
+        Img={defaultImg}
+        imgHeight={defaultImgHeight}
+        {...slides[slideIndex]}
+      />
+      <CarouselButton
+        data-action="prev"
+        onClick={_slideIndexDecrement.bind(null, slides.length)}
+      >
+        Prev
+      </CarouselButton>
+      <CarouselButton
+        data-action="next"
+        onClick={_slideIndexIncrement.bind(null, slides.length)}
+      >
+        Next
+      </CarouselButton>
+    </div>
+  );
+};
 
-  render() {
-    const { defaultImg, defaultImgHeight, slides, ...rest } = this.props;
-    return (
-      <div {...rest}>
-        <CarouselSlide
-          {...slides[this.state.slideIndex]}
-          Img={defaultImg}
-          imgHeight={defaultImgHeight}
-        />
-        <CarouselButton
-          data-action="prev"
-          onClick={this.handleClick.bind(this, -1)}
-        >
-          Prev
-        </CarouselButton>
-        <CarouselButton
-          data-action="next"
-          onClick={this.handleClick.bind(this, 1)}
-        >
-          Next
-        </CarouselButton>
-      </div>
-    );
-  }
-}
+Carousel.defaultProps = {
+  defaultImg: CarouselSlide.defaultProps.Img,
+  defaultImgHeight: CarouselSlide.defaultProps.imgHeight,
+};
 
-export default Carousel;
+export default HasIndex(Carousel, "slideIndex");
