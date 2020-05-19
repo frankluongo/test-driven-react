@@ -3,6 +3,7 @@ import CarouselButton from "./CarouselButton";
 import CarouselSlide from "./CarouselSlide";
 
 import HasIndex from "./HasIndex";
+import AutoAdvances from "./AutoAdvances";
 
 export const Carousel = (props) => {
   const {
@@ -43,4 +44,7 @@ Carousel.defaultProps = {
   defaultImgHeight: CarouselSlide.defaultProps.imgHeight,
 };
 
-export default HasIndex(Carousel, "slideIndex");
+export default HasIndex(
+  AutoAdvances(Carousel, "slideIndex", "slides"),
+  "slideIndex"
+);

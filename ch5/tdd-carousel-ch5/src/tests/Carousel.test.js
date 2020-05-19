@@ -40,6 +40,16 @@ describe("<CarouselWithHOC />", () => {
     mounted.setProps({ slideIndex: 0 });
     expect(mounted.find(CoreCarousel).prop("slideIndex")).toBe(0);
   });
+  it("advances the slide after `autoAdvanceDelay` elapses", () => {
+    jest.useFakeTimers();
+    const autoAdvanceDelay = 10e3;
+    mounted = mount(
+      <Carousel slides={slides} autoAdvanceDelay={autoAdvanceDelay} />
+    );
+    jest.advanceTimersByTime(autoAdvanceDelay);
+    mounted.update(); //(1)
+    expect(mounted.find(CoreCarousel).prop("slideIndex")).toBe(1);
+  });
 });
 
 describe("<CoreCarousel />", () => {

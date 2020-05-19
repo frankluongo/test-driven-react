@@ -151,6 +151,8 @@ The _controllable pattern_ is a means of implemented components that have the be
 
 ### Stacking Higher-Order Components
 
+- One of the biggest “gotchas” in Enzyme’s mount() is that a component’s state changes don’t cause its tree to re-render. So whenever you want to test that the mounted tree changes in response to some event, you’ll need to manually call update()
+
 ### Inspecing Components With React DevTools
 
 ### Mantra: Keep The Unit Small
