@@ -23,23 +23,22 @@ const slides = [
 ];
 
 describe("<CarouselWithHOC />", () => {
-  let wrapper;
+  let mounted;
+
   beforeEach(() => {
-    wrapper = shallow(<Carousel slides={slides} />);
+    mounted = mount(<Carousel slides={slides} />);
   });
   it("sets `slideIndex={0}` on the core component", () => {
-    expect(wrapper.find(CoreCarousel).prop("slideIndex")).toBe(0);
+    expect(mounted.find(CoreCarousel).prop("slideIndex")).toBe(0);
   });
   it("passes `slides` down to the core component", () => {
-    expect(wrapper.find(CoreCarousel).prop("slides")).toBe(slides);
+    expect(mounted.find(CoreCarousel).prop("slides")).toBe(slides);
   });
   it("allows `slideIndex` to be controlled", () => {
-    const mounted = mount(<Carousel slides={slides} slideIndex={1} />);
-    expect(mounted.find(CoreCarousel).props("slideIndex")).toBe(1);
+    mounted = mount(<Carousel slides={slides} slideIndex={1} />);
+    expect(mounted.find(CoreCarousel).prop("slideIndex")).toBe(1);
     mounted.setProps({ slideIndex: 0 });
-    expect(mounted.find(CoreCarousel))
-      .prop("slideIndex")
-      .toBe(0);
+    expect(mounted.find(CoreCarousel).prop("slideIndex")).toBe(0);
   });
 });
 

@@ -14,7 +14,7 @@ export default (Component, indexPropName) => {
 
     static getDerivedStateFromProps(props, state) {
       if (
-        props[indexPropName] !== null &&
+        props[indexPropName] != null &&
         props[indexPropName] !== state.index
       ) {
         return { index: props[indexPropName] };
